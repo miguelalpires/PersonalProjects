@@ -9,18 +9,18 @@ img = new Array()
 for(var i=0; i <= 14; i++) {
         img[i] = new Image()
 }
-img[1].src = "dg0.gif"
-img[2].src = "dg1.gif"
-img[3].src = "dg2.gif"
-img[4].src = "dg3.gif"
-img[5].src = "dg4.gif"
-img[6].src = "dg5.gif"
-img[7].src = "dg6.gif"
-img[8].src = "dg7.gif"
-img[9].src = "dg8.gif"
-img[10].src = "dg9.gif"
-img[11].src = "dgon.gif"
-img[12].src = "dgoff.gif"
+img[1].src = "img/dg0.gif"
+img[2].src = "img/dg1.gif"
+img[3].src = "img/dg2.gif"
+img[4].src = "img/dg3.gif"
+img[5].src = "img/dg4.gif"
+img[6].src = "img/dg5.gif"
+img[7].src = "img/dg6.gif"
+img[8].src = "img/dg7.gif"
+img[9].src = "img/dg8.gif"
+img[10].src = "img/dg9.gif"
+img[11].src = "img/dgon.gif"
+img[12].src = "img/dgoff.gif"
 var base = "dg"
 var space = "space.gif"
 
@@ -29,22 +29,6 @@ var per = false
 var hour = "0"
 var min = "00"
 var sec = "0"
-
-
-
-
-
-function kitkat(){
-	if(per == true){
-	document.control.kitkatButton.value="Continue"
-	pause()
-	
-}
-	else{
-	document.control.kitkatButton.value="Pause"
-	start() 
-}
-}
 
 
 function pause() {
@@ -99,27 +83,41 @@ else{
 }
 
 function add(it) {
-        return "dg" + it + ".gif"
+        return "img/dg" + it + ".gif"
 }
 
 // -->
 </script>
 </head>
-<body>
+<body  bgcolor="Black">
 
 <body onLoad="start()">
 
-<img src="space.gif" width=16 height=21 alt="clock" name="one">
-<img src="space.gif" width=16 height=21 alt="clock" name="two">
-<img src="space.gif" width=14 height=21 alt="clock" name="three">
-<img src="space.gif" width=16 height=21 alt="clock" name="four">
-<img src="space.gif" width=16 height=21 alt="clock" name="five">
-<img src="space.gif" width=9 height=15 alt="clock" name="six">
-<img src="space.gif" width=9 height=15 alt="clock" name="seven">
+<img src="img/space.gif" width=16 height=21 alt="1" name="one">
+<img src="img/space.gif" width=16 height=21 alt="2" name="two">
+<img src="img/space.gif" width=14 height=21 alt="3" name="three">
+<img src="img/space.gif" width=16 height=21 alt="4" name="four">
+<img src="img/space.gif" width=16 height=21 alt="5" name="five">
+<img src="img/space.gif" width=9 height=15 alt="6" name="six">
+<img src="img/space.gif" width=9 height=15 alt="7" name="seven">
 
-<form name="Control">
-<input type="button" value="Start" name="startButton" onClick="start()">
-<input type="button" value="Pause" name="kitkatButton" onClick="kitkat()">
+<form>
+<table>
+<tr>
+<td>
+<input type="button" style="width:120" value="PAUSE" name="pauseButton" onClick="pause()">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" style="width:120" value="CONTINUE" name="continueButton" onClick="start()">
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" style="width:120" value="RESTART" onClick="history.go(0)">
+</td>
+</tr>
+</table>
 </form>
-
 </body>
